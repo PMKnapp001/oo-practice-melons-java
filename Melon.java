@@ -22,5 +22,17 @@ public class Melon {
 		this.harvester = harvester;
 	}
 
+	// All melons can be categorized as sellable or not sellable. 
+	// A melon is able to be sold if both its shape and color ratings are greater than 5, 
+	// and it didn’t come from field 3
+
+	public boolean isSellable() {
+		if (this.colorRating > 5 && this.shapeRating > 5  && this.field != 3) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }
 
